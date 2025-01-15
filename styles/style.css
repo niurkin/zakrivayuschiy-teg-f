@@ -13,4 +13,148 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--main-text-weight);
+  display: grid;
+  justify-items: center;
+  font-size: 18px;
+}
+
+.page__content {
+  inline-size: var(--content-width);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
+  margin: 100px 0;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  gap: 20px;
+  border: var(--border);
+}
+
+.logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.page__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.card-list {
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  display: grid;
+  border: var(--border);
+}
+
+.card__title {
+  display: flex;
+  font-size: inherit;
+  font-variation-settings: 'wght' var(--title-weight);
+  padding: 4px 10px;
+  align-items: center;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-block-end: 25px;
+}
+
+.card__content > *:not(.card__image-wrapper) {
+  padding: 0 25px;
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-block-start: var(--border);
+  border-block-end: var(--border);
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__image-label {
+  position: absolute;
+  top: 25px;
+  right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow:
+               -1px 0 var(--label-stroke-color), 
+               0 1px var(--label-stroke-color), 
+               1px 0 var(--label-stroke-color), 
+               0 -1px var(--label-stroke-color);
+}
+
+@supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {
+  .card__image-label {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+  }
+} 
+
+.card__text {
+  line-height: 21px;
+}
+
+.card__buttons {
+  align-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.common-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border);
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+}
+
+.footer {
+  margin: 50px 0 100px 0;
+}
+
+.save-button {
+  gap: 8px;
+  inline-size: var(--save-button-size);
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.save-button__icon {
+  inline-size: var(--save-icon-size);
 }
