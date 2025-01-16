@@ -10,9 +10,12 @@
   --content-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --save-button-size: 335px;
   --save-icon-size: 21px;
+  --save-dialog-size: 357px;
+  --save-dialog-content-size: 293px;
   /* Оформление */
   --border: 2px solid #000;
   --label-stroke-color: #fff;
+  --dialog-backdrop-color: #000;
 }
 
 
@@ -21,5 +24,7 @@
     --content-width: 100%;
     --save-button-size: 306px;
     --save-icon-size: 28px;
+    --save-dialog-size: 341px;
+    --save-dialog-content-size: 257px;
   }
 }

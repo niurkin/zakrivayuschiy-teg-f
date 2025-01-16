@@ -521,12 +521,21 @@
       </ul>
     </main>
     <footer class="footer">
-      <button class="save-button common-button" type="button">
+      <button class="save-button common-button" type="button" onclick="window['save-dialog'].showModal()" aria-controls="save-dialog">
         <svg class="save-button__icon" viewBox="0 0 21 21">
           <use href="./images/floppy.svg#floppy">
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog class="save-dialog button__text" id="save-dialog" aria-label="Сохранение">
+        <div class="save-dialog__warning">
+          <svg class="save-dialog__icon" viewBox="0 0 21 21">
+            <use href="./images/floppy.svg#floppy">
+          </svg>
+          <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
+          <button class="save-dialog__button common-button" onclick="window['save-dialog'].close()">Ok</button>
+        </div>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>

@@ -35,6 +35,10 @@ button {
   background: transparent;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button,
 input {
   color: currentColor;
