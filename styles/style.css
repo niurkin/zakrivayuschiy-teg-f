@@ -18,10 +18,18 @@
   display: grid;
   justify-items: center;
   font-size: 18px;
+  background-image: var(--background-gradient);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .page__content {
   inline-size: var(--content-width);
+  background-color: var(--content-background);
+  border: var(--border);
+
 }
 
 .header {
@@ -34,7 +42,6 @@
   font-family: var(--accent-font);
   text-transform: uppercase;
   gap: 20px;
-  border: var(--border);
 }
 
 .logo {
@@ -52,7 +59,6 @@
 
 .card {
   display: grid;
-  border: var(--border);
 }
 
 .card__title {
@@ -104,6 +110,7 @@
 }
 
 @supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {
+  
   .card__image-label {
     -webkit-text-stroke: 1px var(--label-stroke-color);
     text-stroke: 1px var(--label-stroke-color);
@@ -146,14 +153,16 @@
 }
 
 .footer {
-  margin: 50px 0 100px 0;
+  inline-size: var(--save-button-size);
+  margin: 50px 0 100px;
+  border: none;
 }
 
 .save-button {
   gap: 8px;
-  inline-size: var(--save-button-size);
   flex-wrap: wrap;
   padding: 15px;
+  inline-size: 100%;
 }
 
 .save-button__icon {

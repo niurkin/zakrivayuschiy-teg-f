@@ -13,6 +13,11 @@
   --save-dialog-size: 357px;
   --save-dialog-content-size: 293px;
   /* Оформление */
+  --background-gradient: 
+                         repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+                         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+                         linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --content-background: #fff;
   --border: 2px solid #000;
   --label-stroke-color: #fff;
   --dialog-backdrop-color: #000;
@@ -20,6 +25,7 @@
 
 
 @media (width <= 375px) {
+  
   :root {
     --content-width: 100%;
     --save-button-size: 306px;
