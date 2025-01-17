@@ -19,8 +19,6 @@
   justify-items: center;
   font-size: 18px;
   background-image: var(--background-gradient);
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -124,27 +122,70 @@
 
 .card__buttons {
   align-self: end;
-  display: flex;
+  display: grid;
+  grid-template-columns: 38px 130px;
+  grid-template-rows: 38px;
+  block-size: 38px;
   align-items: center;
+  gap: 6px;
 }
 
 .card__icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: var(--border-transparent);
+  inline-size: 100%;
+  block-size: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.like-icon {
+  inline-size: 100%;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
 }
 
 .common-button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: var(--border);
   text-transform: inherit;
+  transition: box-shadow 0.3s ease;
+}
+
+.common-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--content-background);
+  mix-blend-mode: difference;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.common-button:hover::after {
+  transform: scaleX(1);
+}
+
+.common-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  
 }
 
 .card__like-button {
-  inline-size: 130px;
-  block-size: 38px;
+  block-size: 100%;
 }
 
 .button__text {
@@ -179,7 +220,7 @@
 }
 
 .save-dialog::backdrop {
-  background-color: var(--dialog-backdrop-color);
+  background-color: var(--accent-color);
   opacity: 0.75;
 }
 
