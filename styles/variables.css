@@ -14,7 +14,7 @@
   --save-dialog-content-size: 293px;
   /* Оформление */
   --accent-color: #000;
-  --accent-color-transparent: #00000000;
+  --accent-color-transparent: #0000;
   --background-gradient: 
                          repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px),
                          repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
@@ -23,8 +23,9 @@
   --border: 2px solid var(--accent-color);
   --border-transparent: 2px solid var(--accent-color-transparent);
   --label-stroke-color: #fff;
+  /* Иконка с сердцем */
+  --heart-main-color: #F00;
 }
-
 
 @media (width <= 375px) {
   
