@@ -25,7 +25,7 @@
 
 .page__content {
   inline-size: var(--content-width);
-  background-color: var(--content-background);
+  background-color: var(--background-color);
   border: var(--border);
 
 }
@@ -101,17 +101,17 @@
   mix-blend-mode: hard-light;
   opacity: 0.5;
   text-shadow:
-               -1px 0 var(--label-stroke-color), 
-               0 1px var(--label-stroke-color), 
-               1px 0 var(--label-stroke-color), 
-               0 -1px var(--label-stroke-color);
+               -1px 0 var(--background-color), 
+               0 1px var(--background-color), 
+               1px 0 var(--background-color), 
+               0 -1px var(--background-color);
 }
 
-@supports((text-stroke: 1px var(--label-stroke-color)) or (-webkit-text-stroke: 1px var(--label-stroke-color))) {
+@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
   
   .card__image-label {
-    -webkit-text-stroke: 1px var(--label-stroke-color);
-    text-stroke: 1px var(--label-stroke-color);
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
 } 
@@ -234,7 +234,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-color: var(--content-background);
+  background-color: var(--background-color);
   transform-origin: 0 0;
   transform: scaleX(0);
   transition: transform 0.5s ease-in-out;
@@ -262,7 +262,7 @@
 }
 
 .footer {
-  inline-size: var(--save-button-size);
+  inline-size: var(--footer-width);
   margin: 50px 0 100px;
   border: none;
 }
@@ -279,31 +279,24 @@
 }
 
 .save-dialog {
+  grid-template-columns: 39px auto;
+  column-gap: 20px;
+  row-gap: 30px;
+  align-items: center;
   font-family: var(--accent-font);
   font-size: 14px;
   text-transform: uppercase;
-  inline-size: var(--save-dialog-size);
-  padding: 30px 0;
+  inline-size: var(--save-dialog-width);
+  padding: 30px var(--save-dialog-inline-gap);
 }
 
 .save-dialog[open] {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 }
 
 .save-dialog::backdrop {
   background-color: var(--accent-color);
   opacity: 0.75;
-}
-
-.save-dialog__warning {
-  inline-size: var(--save-dialog-content-size);
-  display: grid;
-  grid-template-columns: 39px auto;
-  column-gap: 20px;
-  row-gap: 30px;
-  align-items: center;
 }
 
 .save-dialog__icon {
