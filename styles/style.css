@@ -92,6 +92,38 @@
   object-position: center;
 }
 
+.filter-grayscale {
+  filter: grayscale(30%);
+}
+
+.filter-saturate {
+  filter: brightness(70%) saturate(70%);
+}
+
+.filter-contrast {
+  filter: brightness(70%) contrast(60%);
+}
+
+.filter-blur {
+  filter: brightness(70%) blur(1px);
+}
+
+.filter-sepia {
+  filter: brightness(70%) sepia(50%);
+}
+
+.filter-hue-rotate {
+  filter: brightness(70%) hue-rotate(200deg);
+}
+
+.filter-opacity {
+  filter: brightness(70%) opacity(80%);
+}
+
+.filter-invert {
+  filter: brightness(70%) invert(70%);
+}
+
 .card__image-label {
   position: absolute;
   top: 25px;
