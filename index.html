@@ -16,7 +16,7 @@
 
   <body class="page">
     <header class="header page__content">
-      <div class="logo">&lt;/Html&gt;</div>
+      <a class="logo" href="./index.html">&lt;/Html&gt;</a>
       <h1 class="page__title">Закрывающий тег</h1>
     </header>
     <main class="main">
@@ -49,12 +49,17 @@
                 сомнения.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -115,12 +120,17 @@
                 как я буду все это делать???»
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -179,12 +189,17 @@
                 головоломок, сборе пазлов или создания построек из конструктора.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -245,12 +260,17 @@
                 хуже, а потом переписывал снова.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -313,12 +333,17 @@
                 Мне повезло, что мои близкие люди — как раз такие.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -378,12 +403,17 @@
                 голове само.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -445,12 +475,17 @@
                 сам не заметил, как закончил вёрстку.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -511,12 +546,17 @@
                 буду по ним скучать, когда перейду к следующему модулю.
               </p>
               <div class="card__buttons">
-                <button class="card__icon-button" type="button">
+                <button
+                  class="card__icon-button"
+                  type="button"
+                  aria-label="Поставить лайк"
+                >
                   <svg
                     viewBox="0 0 39 36"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     class="like-icon"
+                    aria-hidden="true"
                   >
                     <g class="heart">
                       <path
@@ -551,31 +591,29 @@
         </li>
       </ul>
     </main>
-    <footer class="footer page__content">
+    <button
+      class="save-button common-button page__content"
+      type="button"
+      onclick="window['save-dialog'].showModal()"
+      aria-controls="save-dialog"
+    >
+      <svg class="save-button__icon" viewBox="0 0 21 21" aria-hidden="true">
+        <use href="./svg/floppy.svg#floppy" />
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+    <dialog class="save-dialog" id="save-dialog" aria-label="Сохранение">
+      <svg class="save-dialog__icon" viewBox="0 0 21 21" aria-hidden="true">
+        <use href="./svg/floppy.svg#floppy" />
+      </svg>
+      <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
       <button
-        class="save-button common-button"
-        type="button"
-        onclick="window['save-dialog'].showModal()"
-        aria-controls="save-dialog"
+        class="save-dialog__button common-button"
+        onclick="window['save-dialog'].close()"
       >
-        <svg class="save-button__icon" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text">Ok</span>
       </button>
-      <dialog class="save-dialog" id="save-dialog" aria-label="Сохранение">
-        <svg class="save-dialog__icon" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
-        <button
-          class="save-dialog__button common-button"
-          onclick="window['save-dialog'].close()"
-        >
-          <span class="button__text">Ok</span>
-        </button>
-      </dialog>
-    </footer>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

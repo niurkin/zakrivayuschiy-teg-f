@@ -18,6 +18,7 @@
   display: grid;
   justify-items: center;
   font-size: 18px;
+  background-color: var(--page-background-color);
   background-image: var(--background-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -37,13 +38,14 @@
   justify-content: center;
   padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
   margin: 100px 0;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   gap: 20px;
 }
 
 .logo {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
 }
 
 .page__title {
@@ -128,7 +130,7 @@
   position: absolute;
   top: 25px;
   right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -149,17 +151,16 @@
 } 
 
 .card__text {
-  line-height: 21px;
+  line-height: 1.167em;
 }
 
 .card__buttons {
   align-self: end;
   display: grid;
-  grid-template-columns: 38px 130px;
-  grid-template-rows: 38px;
+  grid-template-columns:40px 130px;
   block-size: 38px;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .card__icon-button {
@@ -182,7 +183,6 @@
 
 .like-icon {
   inline-size: 100%;
-  transform: scale(1.2);
 }
 
 .heart {
@@ -279,31 +279,28 @@
 }
 
 .common-button:focus {
-  outline: none;
+  outline: none; 
+}
+
+.common-button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
-  
 }
 
 .card__like-button {
-  block-size: 100%;
+  block-size: 38px;
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-}
-
-.footer {
-  inline-size: var(--footer-width);
-  margin: 50px 0 100px;
-  border: none;
 }
 
 .save-button {
   gap: 8px;
   flex-wrap: wrap;
   padding: 15px;
-  inline-size: 100%;
+  inline-size: var(--footer-width);
+  margin: 50px 0 100px;
 }
 
 .save-button__icon {
@@ -315,7 +312,7 @@
   column-gap: 20px;
   row-gap: 30px;
   align-items: center;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   text-transform: uppercase;
   inline-size: var(--save-dialog-width);
@@ -336,7 +333,7 @@
 }
 
 .save-dialog__text {
-  line-height: 21px;
+  line-height: 1.5em;
 }
 
 .save-dialog__button {
