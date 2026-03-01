@@ -1,15 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -145,7 +133,6 @@
   
   .card__image-label {
     -webkit-text-stroke: 1px var(--background-color);
-    text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
 } 
@@ -245,10 +232,12 @@
 }
 
 .like-icon.is-liked .heart {
+  /* stylelint-disable-next-line no-unknown-animations */
   animation: heart-scale 0.3s 0.1s ease-in;
 }
 
 .like-icon.is-liked .sparks {
+  /* stylelint-disable-next-line no-unknown-animations */
   animation: sparkle 0.3s 0.3s ease-in;
 }
 
