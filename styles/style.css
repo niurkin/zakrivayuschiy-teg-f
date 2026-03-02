@@ -133,6 +133,8 @@
   
   .card__image-label {
     -webkit-text-stroke: 1px var(--background-color);
+    /* stylelint-disable-next-line property-no-unknown */
+    text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
 } 
